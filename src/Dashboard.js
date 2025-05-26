@@ -6,7 +6,7 @@ function Dashboard({ onLogout }) {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    axios.get(`${process.env.REACT_APP_API_URL}/api/mahasiswa`, {
+    axios.get(`${process.env.REACT_APP_API_URL}/mahasiswa`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setData(res.data))
